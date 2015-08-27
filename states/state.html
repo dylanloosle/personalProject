@@ -1,0 +1,40 @@
+
+<div class="state-info">
+    <form>
+        <div class="current-state">
+        State: {{currentState}}
+        </div>
+        </br>
+
+
+        Population:
+        {{displayPopulation}}
+        </br>
+        </br>
+        <img id="images" ng-src="{{stateImage}}">
+        </br>
+        </br>
+
+        <select ng-model="selected">
+            <option value="DP02_0001PE">Number of households</option>
+            <option value="DP03_0062E">Mean Income</option>
+            <option value="DP02_0067PE">% with Bachelor's Degree</option>
+            <option value="DP02_0114E">Spanish speaking people</option>
+            <option value="DP05_0025E">Number of seniors (65+)</option>
+            <option value="DP02_0015E">Average Household Size</option>
+        </select>
+        &nbsp;&nbsp; <button ng-click="getData()">Go!</button>
+        &nbsp;&nbsp; <span>Answer:</span>
+        {{displayAnswer}}
+
+        </br>
+        </br>
+        &nbsp;&nbsp; Percentage of population: {{fixedPercentage}}
+
+        </br>
+        </br>
+        <!--<button ng-click="getPercentage()">Percentage</button>-->
+        <!--&nbsp;&nbsp; Percentage:-->
+        <!--{{percentage}}-->
+    </form>
+</div>

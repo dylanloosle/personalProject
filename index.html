@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="census">
+<head>
+    <title>Census</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body data-ng-controller="ctrl">
+    <header>
+            <div class="census">
+                <a id="census-data" href="#/">
+                CENSUS DATA
+                </a>
+
+            </div>
+
+
+    </header>
+
+    <ng-view></ng-view>
+    <div class="map">
+        <div class="info">
+
+            Click on a State
+            <iframe src="http://createaclickablemap.com/map.php?&id=39474&online=true" width="900" height="525" style="border: none;"></iframe>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="ctrl.js"></script>
+    <script src="service.js"></script>
+    <script src="states/stateCtrl.js"></script>
+    <script src="map/mapCtrl.js"></script>
+    <script>if (window.addEventListener){ window.addEventListener("message", function(event) { if(event.data.length >= 22) { if( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT") location = event.data.substr(22); } }, false); } else if (window.attachEvent){ window.attachEvent("message", function(event) { if( event.data.length >= 22) { if ( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT") location = event.data.substr(22); } }, false); } </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+
+</body>
+</html>
